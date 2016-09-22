@@ -20,7 +20,10 @@ generate_dynamic_reconfigure_options(
   cfg/DiscreteFourierTransform.cfg
   cfg/AddingImages.cfg
   cfg/Smoothing.cfg
-  cfg/EdgeDetection.cfg cfg/HoughLines.cfg cfg/HoughCircles.cfg
+  cfg/EdgeDetection.cfg
+  cfg/HoughLines.cfg
+  cfg/IpaHoughLines.cfg
+  cfg/HoughCircles.cfg
   cfg/FindContours.cfg cfg/ConvexHull.cfg cfg/GeneralContours.cfg cfg/ContourMoments.cfg
   cfg/FaceDetection.cfg
   cfg/GoodfeatureTrack.cfg
@@ -159,7 +162,10 @@ opencv_apps_add_nodelet(edge_detection edge_detection/edge_detection src/nodelet
                                                                                                              # ./tutorial_code/ImgTrans/Laplace_Demo.cpp
                                                                                                              # ./tutorial_code/ImgTrans/Sobel_Demo.cpp
 opencv_apps_add_nodelet(hough_lines hough_lines/hough_lines src/nodelet/hough_lines_nodelet.cpp) # ./tutorial_code/ImgTrans/HoughLines_Demo.cpp
+opencv_apps_add_nodelet(ipa_hough_lines ipa_hough_lines/ipa_hough_lines src/nodelet/ipa_hough_lines_nodelet.cpp) # ./tutorial_code/ImgTrans/HoughLines_Demo.cpp
 opencv_apps_add_nodelet(hough_circles hough_circles/hough_circles src/nodelet/hough_circles_nodelet.cpp) # ./tutorial_code/ImgTrans/HoughCircle_Demo.cpp
+opencv_apps_add_nodelet(histogram_equalization histogram_equalization/histogram_equalization src/nodelet/histogram_equalization.cpp) # ./tutorial_code/ImgTrans/HoughCircle_Demo.cpp
+opencv_apps_add_nodelet(clahe clahe/clahe src/nodelet/clahe_nodelet.cpp) # ./tutorial_code/ImgTrans/HoughCircle_Demo.cpp
  # ./tutorial_code/ImgTrans/copyMakeBorder_demo.cpp
  # ./tutorial_code/ImgTrans/filter2D_demo.cpp
  # ./tutorial_code/ImgTrans/Geometric_Transforms_Demo.cpp

@@ -91,4 +91,17 @@
     <description>Nodelet to demonstrate the famous watershed segmentation algorithm in OpenCV: watershed()</description>
   </class>
 
+  <class name="histogram_equalization/histogram_equalization" type="histogram_equalization::HistogramEqualizationNodelet" base_class_type="nodelet::Nodelet">
+    <description>Nodelet to demonstrate the famous watershed segmentation algorithm in OpenCV: watershed()</description>
+  </class>
+
+
+  <class name="clahe/clahe" type="clahe::CLAHENodelet" base_class_type="nodelet::Nodelet">
+    <description>Nodelet to demonstrate the famous watershed segmentation algorithm in OpenCV: watershed()</description>
+  </class>
+
+  <class name="ipa_hough_lines/ipa_hough_lines" type="ipa_hough_lines::IpaHoughLinesNodelet" base_class_type="nodelet::Nodelet">
+    <description>Nodelet to demonstrate the famous watershed segmentation algorithm in OpenCV: watershed()</description>
+  </class>
+
 </library>
