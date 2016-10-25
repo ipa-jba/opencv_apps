@@ -128,7 +128,8 @@ class IpaHoughLinesNodelet : public opencv_apps::Nodelet
       if (in_image.channels() > 1) {
         cv::cvtColor( in_image, src_gray, cv::COLOR_BGR2GRAY );
         /// Apply Canny edge detector
-        Canny( src_gray, in_image, config_.canny_low_thresh, config_.canny_high_thresh, config_.blur_filter*2+1 );
+        blur(src_gray, src_gray, cv::Size(3,3));
+        Canny( src_gray, in_image, config_.canny_low_thresh, config_.canny_high_thresh, 3 );
       }
       else {
         /// Check whether input gray image is filtered such that canny, sobel ...etc
